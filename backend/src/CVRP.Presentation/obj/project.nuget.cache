@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "JIhe6QZKDYvcRTCa38eJMKVjszjwyGVcImb+RunYwyGMDkZ9oi8O3zOySZgkzx6PEauFdcpRQLLt7Zi4SdRpWg==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Presentation\\CVRP.Presentation.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nuget.selise.biz/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}

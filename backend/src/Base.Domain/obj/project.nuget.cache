@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ChSGqkOv8hqfNyEyTiSYIUiM8TdX1HkEA91spRx6GS/WSZGoUBVeNZnZ4xL2UA7TY9fYrjPSZIxwuWh4ieO7Sw==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Domain\\Base.Domain.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nuget.selise.biz/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}
