@@ -4,25 +4,26 @@ using CVRP.Application.Dtos;
 using CVRP.Domain.Entities;
 using Google.OrTools.ConstraintSolver;
 
-
 namespace CVRP.Application.Solver
 {
     public class CvrpSolver
     {
-        public CvrpResponse GetCvrpSolution(CvrpEntity cvrpEntity)
+        public async Task<CvrpResponse> GetCvrpSolutionAsync(CvrpRequest cvrpEntity)
         {
+            var distanceMatrix = await VrpMatrix.GetDistanceMatrixAsync(cvrpEntity.Locations); 
+
             // Instantiate the data problem
             var data = new DataModel()
             {
-                DistabceMatrix = VrpMatrix.GetDistanceMatrix(cvrpEntity.Locations),
+                DistanceMatrix = distanceMatrix,
                 Vehicles = cvrpEntity.Vehicles,
-                VehicleCapacities = cvrpEntity.VehicleCapacities,
-                Demands = cvrpEntity.Demands,
+                //VehicleCapacities = cvrpEntity.VehicleCapacities,
+                //Demands = cvrpEntity.Demands,
                 Deput = cvrpEntity.Deput,
             };
 
             // Create Routing Index Manager
-            var manager = new RoutingIndexManager(num_nodes: data.DistabceMatrix.GetLength(0),
+            var manager = new RoutingIndexManager(num_nodes: data.DistanceMatrix.GetLength(0),
                                                   num_vehicles: data.Vehicles,
                                                   depot: data.Deput);
 
@@ -37,28 +38,31 @@ namespace CVRP.Application.Solver
                 var toNode = manager.IndexToNode(toIndex);
 
                 // Returns the distance between two nodes
-                return (long)data.DistabceMatrix[fromNode, toNode];
+                return (long)data.DistanceMatrix[fromNode, toNode];
             });
 
             // Define cost of each arc
             routing.SetArcCostEvaluatorOfAllVehicles(transitCallbackIndex);
 
-            // Add Capacity Constraints
-            var demandCallbackIndex = routing.RegisterUnaryTransitCallback((long fromIndex) =>
-            {
-                // Convert from routing VariableIndex to demands NodeIndex
-                var fromNode = manager.IndexToNode(fromIndex);
+            //// Add Capacity Constraints
+            //var demandCallbackIndex = routing.RegisterUnaryTransitCallback((long fromIndex) =>
+            //{
+            //    // Convert from routing VariableIndex to demands NodeIndex
+            //    var fromNode = manager.IndexToNode(fromIndex);
 
-                // Returns the demand of the node
-                return data.Demands[fromNode];
-            });
+            //    // Returns the demand of the node
+            //    return data.Demands[fromNode];
+            //});
 
             // Add distance constraints with Vehicle Capacity
-            routing.AddDimensionWithVehicleCapacity(evaluator_index: demandCallbackIndex,
-                                                    slack_max: 0, // null capacity slack
-                                                    vehicle_capacities: data.VehicleCapacities,
-                                                    fix_start_cumul_to_zero: true,
-                                                    name: "Capacity");
+            routing.AddDimension(evaluator_index: transitCallbackIndex,
+                                 slack_max: 0,
+                                 capacity: 30000000,
+                                 fix_start_cumul_to_zero: true,
+                                 name: "Distance");
+
+            var distanceDimension = routing.GetMutableDimension("Distance");
+            distanceDimension.SetGlobalSpanCostCoefficient(coefficient: 2);
 
             // Setting first solution heuristic
             var searchParameters = operations_research_constraint_solver.DefaultRoutingSearchParameters();
@@ -92,24 +96,24 @@ namespace CVRP.Application.Solver
                 var routeLoad = 0L;
                 var routeDistance = 0L;
 
-                while (routing.IsEnd(index))
+                while (!routing.IsEnd(index))
                 {
                     var nodeIndex = manager.IndexToNode(index);
-                    var currentNodeLoad = data.Demands[nodeIndex];
+                    //var currentNodeLoad = data.Demands[nodeIndex];
 
                     var previousIndex = index;
                     index = solution.Value(routing.NextVar(index));
 
-                    var currentArcDistance = routing.GetArcCostForVehicle(previousIndex, index, vehicle);
+                    var currentArcDistance = routing.GetArcCostForVehicle(previousIndex, index, 0);
 
                     path.Nodes.Add(new BaseNode
                     {
                         Node = nodeIndex,
-                        Load = currentNodeLoad,
-                        Distance = currentArcDistance
+                        //Load = currentNodeLoad,
+                        //Distance = currentArcDistance
                     });
 
-                    routeLoad += currentNodeLoad;
+                    //routeLoad += currentNodeLoad;
                     routeDistance += currentArcDistance;
                 }
 

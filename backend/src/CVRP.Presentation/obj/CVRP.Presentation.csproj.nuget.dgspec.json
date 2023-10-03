@@ -4,6 +4,393 @@
     "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Presentation\\CVRP.Presentation.csproj": {}
   },
   "projects": {
+    "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Application\\Base.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Application\\Base.Application.csproj",
+        "projectName": "Base.Application",
+        "projectPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Application\\Base.Application.csproj",
+        "packagesPath": "C:\\Users\\dipuk\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dipuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.selise.biz/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Domain\\Base.Domain.csproj": {
+                "projectPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Domain\\Base.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "default"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.7.23376.3\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Domain\\Base.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Domain\\Base.Domain.csproj",
+        "projectName": "Base.Domain",
+        "projectPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Domain\\Base.Domain.csproj",
+        "packagesPath": "C:\\Users\\dipuk\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dipuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.selise.biz/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Shared\\Base.Shared.csproj": {
+                "projectPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Shared\\Base.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "default"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.7.23376.3\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Shared\\Base.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Shared\\Base.Shared.csproj",
+        "projectName": "Base.Shared",
+        "projectPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Shared\\Base.Shared.csproj",
+        "packagesPath": "C:\\Users\\dipuk\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dipuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.selise.biz/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "default"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Google.OrTools": {
+              "target": "Package",
+              "version": "[9.7.2996, )"
+            },
+            "GoogleApi": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.7.23376.3\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Application\\CVRP.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Application\\CVRP.Application.csproj",
+        "projectName": "CVRP.Application",
+        "projectPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Application\\CVRP.Application.csproj",
+        "packagesPath": "C:\\Users\\dipuk\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dipuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.selise.biz/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Application\\Base.Application.csproj": {
+                "projectPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Application\\Base.Application.csproj"
+              },
+              "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Domain\\CVRP.Domain.csproj": {
+                "projectPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Domain\\CVRP.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "default"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.7.23376.3\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Domain\\CVRP.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Domain\\CVRP.Domain.csproj",
+        "projectName": "CVRP.Domain",
+        "projectPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Domain\\CVRP.Domain.csproj",
+        "packagesPath": "C:\\Users\\dipuk\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dipuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.selise.biz/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Domain\\Base.Domain.csproj": {
+                "projectPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\Base.Domain\\Base.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "default"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.7.23376.3\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Infrastructure\\CVRP.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Infrastructure\\CVRP.Infrastructure.csproj",
+        "projectName": "CVRP.Infrastructure",
+        "projectPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Infrastructure\\CVRP.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\dipuk\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dipuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.selise.biz/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Application\\CVRP.Application.csproj": {
+                "projectPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Application\\CVRP.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "default"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.7.23376.3\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Presentation\\CVRP.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -28,7 +415,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Infrastructure\\CVRP.Infrastructure.csproj": {
+                "projectPath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Infrastructure\\CVRP.Infrastructure.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

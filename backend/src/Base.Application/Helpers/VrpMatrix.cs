@@ -1,10 +1,11 @@
 ﻿using Base.Domain.Entities;
+using System.Diagnostics;
 
 namespace Base.Application.Helpers
 {
     public static class VrpMatrix
     {
-        public static double[,] GetDistanceMatrix(Location[] locations)
+        public static async Task<double[,]> GetDistanceMatrixAsync(BaseLocation[] locations)
         {
             int rows = locations.Length;
             int cols = locations.Length;
@@ -14,8 +15,11 @@ namespace Base.Application.Helpers
             {
                 for (int j = 0; j < cols; j++)
                 {
-                    double distanceBetweenTwoLocation = Calculations.CalculateDistanceBetweenTwoLocation(locations[i], locations[j]);
+                    //double distanceBetweenTwoLocation = Calculations.CalculateDistanceBetweenTwoLocation(locations[i], locations[j]);
+                    double distanceBetweenTwoLocation = await Calculations.GetDistanceAsync(locations[i], locations[j]);
                     distanceMatrix[i, j] = distanceBetweenTwoLocation;
+
+                    Debug.Print($"{i} - {j} : {distanceBetweenTwoLocation}");
                 }
             }
 

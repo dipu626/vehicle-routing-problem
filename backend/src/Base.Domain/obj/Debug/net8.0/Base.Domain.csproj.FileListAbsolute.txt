@@ -1,0 +1,16 @@
+D:\Projects\PetProjects\vehicle-routing-problem\backend\src\Base.Domain\bin\Debug\net8.0\Base.Domain.deps.json
+D:\Projects\PetProjects\vehicle-routing-problem\backend\src\Base.Domain\bin\Debug\net8.0\Base.Domain.dll
+D:\Projects\PetProjects\vehicle-routing-problem\backend\src\Base.Domain\bin\Debug\net8.0\Base.Domain.pdb
+D:\Projects\PetProjects\vehicle-routing-problem\backend\src\Base.Domain\bin\Debug\net8.0\Base.Shared.dll
+D:\Projects\PetProjects\vehicle-routing-problem\backend\src\Base.Domain\bin\Debug\net8.0\Base.Shared.pdb
+D:\Projects\PetProjects\vehicle-routing-problem\backend\src\Base.Domain\obj\Debug\net8.0\Base.Domain.csproj.AssemblyReference.cache
+D:\Projects\PetProjects\vehicle-routing-problem\backend\src\Base.Domain\obj\Debug\net8.0\Base.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\PetProjects\vehicle-routing-problem\backend\src\Base.Domain\obj\Debug\net8.0\Base.Domain.AssemblyInfoInputs.cache
+D:\Projects\PetProjects\vehicle-routing-problem\backend\src\Base.Domain\obj\Debug\net8.0\Base.Domain.AssemblyInfo.cs
+D:\Projects\PetProjects\vehicle-routing-problem\backend\src\Base.Domain\obj\Debug\net8.0\Base.Domain.csproj.CoreCompileInputs.cache
+D:\Projects\PetProjects\vehicle-routing-problem\backend\src\Base.Domain\obj\Debug\net8.0\Base.Domain.sourcelink.json
+D:\Projects\PetProjects\vehicle-routing-problem\backend\src\Base.Domain\obj\Debug\net8.0\Base.Domain.csproj.CopyComplete
+D:\Projects\PetProjects\vehicle-routing-problem\backend\src\Base.Domain\obj\Debug\net8.0\Base.Domain.dll
+D:\Projects\PetProjects\vehicle-routing-problem\backend\src\Base.Domain\obj\Debug\net8.0\refint\Base.Domain.dll
+D:\Projects\PetProjects\vehicle-routing-problem\backend\src\Base.Domain\obj\Debug\net8.0\Base.Domain.pdb
+D:\Projects\PetProjects\vehicle-routing-problem\backend\src\Base.Domain\obj\Debug\net8.0\ref\Base.Domain.dll

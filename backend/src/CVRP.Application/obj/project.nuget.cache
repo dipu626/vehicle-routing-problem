@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "dgSpecHash": "SdVXvFa7+u3aZuycBz1VpRlr2t/1wAxqwZVrazFMYjlusz8TNAeb4wIusQ1e6JtIbuSaqwMGvBIG3a5X7w+n6g==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\PetProjects\\vehicle-routing-problem\\backend\\src\\CVRP.Application\\CVRP.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dipuk\\.nuget\\packages\\google.ortools\\9.7.2996\\google.ortools.9.7.2996.nupkg.sha512",
+    "C:\\Users\\dipuk\\.nuget\\packages\\google.ortools.runtime.linux-arm64\\9.7.2996\\google.ortools.runtime.linux-arm64.9.7.2996.nupkg.sha512",
+    "C:\\Users\\dipuk\\.nuget\\packages\\google.ortools.runtime.linux-x64\\9.7.2996\\google.ortools.runtime.linux-x64.9.7.2996.nupkg.sha512",
+    "C:\\Users\\dipuk\\.nuget\\packages\\google.ortools.runtime.osx-arm64\\9.7.2996\\google.ortools.runtime.osx-arm64.9.7.2996.nupkg.sha512",
+    "C:\\Users\\dipuk\\.nuget\\packages\\google.ortools.runtime.osx-x64\\9.7.2996\\google.ortools.runtime.osx-x64.9.7.2996.nupkg.sha512",
+    "C:\\Users\\dipuk\\.nuget\\packages\\google.ortools.runtime.win-x64\\9.7.2996\\google.ortools.runtime.win-x64.9.7.2996.nupkg.sha512",
+    "C:\\Users\\dipuk\\.nuget\\packages\\google.protobuf\\3.23.3\\google.protobuf.3.23.3.nupkg.sha512",
+    "C:\\Users\\dipuk\\.nuget\\packages\\googleapi\\5.2.1\\googleapi.5.2.1.nupkg.sha512",
+    "C:\\Users\\dipuk\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\dipuk\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\dipuk\\.nuget\\packages\\microsoft.extensions.http\\7.0.0\\microsoft.extensions.http.7.0.0.nupkg.sha512",
+    "C:\\Users\\dipuk\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\dipuk\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\dipuk\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\dipuk\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\dipuk\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\dipuk\\.nuget\\packages\\system.text.json\\7.0.2\\system.text.json.7.0.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nuget.selise.biz/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}

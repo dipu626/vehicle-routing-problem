@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CVRP.Infrastructure\CVRP.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

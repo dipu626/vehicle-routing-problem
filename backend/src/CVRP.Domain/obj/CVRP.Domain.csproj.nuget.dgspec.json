@@ -110,6 +110,10 @@
             "Google.OrTools": {
               "target": "Package",
               "version": "[9.7.2996, )"
+            },
+            "GoogleApi": {
+              "target": "Package",
+              "version": "[5.2.1, )"
             }
           },
           "imports": [
