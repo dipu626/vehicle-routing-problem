@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CVRP.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd37286abe6a5ac179b07ce513d6ae1529f1e589")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CVRP.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CVRP.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

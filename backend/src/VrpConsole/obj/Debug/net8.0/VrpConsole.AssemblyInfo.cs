@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VrpConsole")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd37286abe6a5ac179b07ce513d6ae1529f1e589")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ba241f782143c44ee82c84e82f7e93895216b8e")]
 [assembly: System.Reflection.AssemblyProductAttribute("VrpConsole")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VrpConsole")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

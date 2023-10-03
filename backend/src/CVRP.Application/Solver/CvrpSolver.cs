@@ -3,6 +3,9 @@ using Base.Domain.Entities;
 using CVRP.Application.Dtos;
 using CVRP.Domain.Entities;
 using Google.OrTools.ConstraintSolver;
+using GoogleApi.Entities.Maps.Directions.Response;
+using GoogleApi.Entities.Translate.Common.Enums;
+using System.Xml.Linq;
 
 namespace CVRP.Application.Solver
 {
@@ -17,8 +20,8 @@ namespace CVRP.Application.Solver
             {
                 DistanceMatrix = distanceMatrix,
                 Vehicles = cvrpEntity.Vehicles,
-                //VehicleCapacities = cvrpEntity.VehicleCapacities,
-                //Demands = cvrpEntity.Demands,
+                VehicleCapacities = cvrpEntity.VehicleCapacities,
+                Demands = cvrpEntity.Demands,
                 Deput = cvrpEntity.Deput,
             };
 
@@ -44,23 +47,30 @@ namespace CVRP.Application.Solver
             // Define cost of each arc
             routing.SetArcCostEvaluatorOfAllVehicles(transitCallbackIndex);
 
-            //// Add Capacity Constraints
-            //var demandCallbackIndex = routing.RegisterUnaryTransitCallback((long fromIndex) =>
-            //{
-            //    // Convert from routing VariableIndex to demands NodeIndex
-            //    var fromNode = manager.IndexToNode(fromIndex);
+            // Add Capacity Constraints
+            var demandCallbackIndex = routing.RegisterUnaryTransitCallback((long fromIndex) =>
+            {
+                // Convert from routing VariableIndex to demands NodeIndex
+                var fromNode = manager.IndexToNode(fromIndex);
 
-            //    // Returns the demand of the node
-            //    return data.Demands[fromNode];
-            //});
+                // Returns the demand of the node
+                return data.Demands[fromNode];
+            });
 
             // Add distance constraints with Vehicle Capacity
-            routing.AddDimension(evaluator_index: transitCallbackIndex,
-                                 slack_max: 0,
-                                 capacity: 30000000,
-                                 fix_start_cumul_to_zero: true,
-                                 name: "Distance");
+            //routing.AddDimension(evaluator_index: transitCallbackIndex,
+            //                     slack_max: 0,
+            //                     capacity: 30000000,
+            //                     fix_start_cumul_to_zero: true,
+            //                     name: "Distance");
+            routing.AddDimensionWithVehicleCapacity(evaluator_index: demandCallbackIndex,
+                                                    slack_max: 0,
+                                                    vehicle_capacities: data.VehicleCapacities,
+            fix_start_cumul_to_zero: true,
+            name: "Distance");
 
+            //This method retrieves a mutable dimension from the routing model.In vehicle routing problems,
+            //a dimension typically represents a quantity associated with the edges of the graph.
             var distanceDimension = routing.GetMutableDimension("Distance");
             distanceDimension.SetGlobalSpanCostCoefficient(coefficient: 2);
 
@@ -99,7 +109,7 @@ namespace CVRP.Application.Solver
                 while (!routing.IsEnd(index))
                 {
                     var nodeIndex = manager.IndexToNode(index);
-                    //var currentNodeLoad = data.Demands[nodeIndex];
+                    var currentNodeLoad = data.Demands[nodeIndex];
 
                     var previousIndex = index;
                     index = solution.Value(routing.NextVar(index));
@@ -109,16 +119,19 @@ namespace CVRP.Application.Solver
                     path.Nodes.Add(new BaseNode
                     {
                         Node = nodeIndex,
-                        //Load = currentNodeLoad,
-                        //Distance = currentArcDistance
+                        Load = currentNodeLoad,
+                        Distance = currentArcDistance
                     });
 
-                    //routeLoad += currentNodeLoad;
+                    routeLoad += currentNodeLoad;
                     routeDistance += currentArcDistance;
                 }
 
                 result.TotalDistance += routeDistance;
                 result.TotalLoad += routeLoad;
+
+                path.RouteLoad = routeLoad;
+                path.RouteDistance = routeDistance;
                 result.Routes.Add(path);
             }
 

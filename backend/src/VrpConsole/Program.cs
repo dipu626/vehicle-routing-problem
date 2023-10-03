@@ -37,7 +37,7 @@ internal class Program
         {
             Deput = 0,
             Vehicles = 3,
-            VehicleCapacities = new long[] { 20, 20, 20 },
+            VehicleCapacities = new long[] { 5, 1, 14},
             Locations = new BaseLocation[]
             {
                 dhaka,
@@ -60,6 +60,7 @@ internal class Program
 
         // Test: calc distance (Test OK)
         //var khulnaToSatkhira = await Calculations.GetDistanceAsync(khulna, satkhira);
+
 
         Dictionary<int, string> map = new Dictionary<int, string>
         {
