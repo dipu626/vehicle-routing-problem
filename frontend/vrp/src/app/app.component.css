@@ -1,4 +1,15 @@
 .container{
-    width: 100vw;
-    height: 100vh;
+    width: 98vw;
+    height: 98vh;
 }
+
+.btn-delete-markers {
+    position: absolute;  /* Set position to absolute */
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;  /* Set a high z-index value to make sure it appears above the map */
+  }

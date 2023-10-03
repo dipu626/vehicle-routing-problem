@@ -2,8 +2,10 @@
 {
     public class DataModel
     {
-        public decimal[,] DistabceMatrix { get; set; } = new decimal[0, 0];
+        public double[,] DistabceMatrix { get; set; } = new double[0, 0];
+        public long[] Demands { get; set; } = Array.Empty<long>();
         public int Vehicles { get; set; } = 0;
+        public long[] VehicleCapacities { get; set; } = Array.Empty<long>();
         public int Deput { get; set; } = 0;
     }
 }

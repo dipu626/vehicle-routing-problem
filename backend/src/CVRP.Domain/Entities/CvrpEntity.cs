@@ -5,8 +5,9 @@ namespace CVRP.Domain.Entities
     public class CvrpEntity : BaseEntity
     {
         public int Deput { get; set; } = 0;
-        public decimal[] VehicleCapacity { get; set; } = Array.Empty<decimal>();
-        public decimal[] Lattitudes { get; set; } = Array.Empty<decimal>();
-        public decimal[] Longitudes { get; set; } = Array.Empty<decimal>();
+        public int Vehicles { get; set; } = 0;
+        public long[] VehicleCapacities { get; set; } = Array.Empty<long>();
+        public Location[] Locations { get; set;} = Array.Empty<Location>();
+        public long[] Demands { get; set; } = Array.Empty<long>();
     }
 }

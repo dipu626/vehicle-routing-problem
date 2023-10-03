@@ -1,18 +1,20 @@
-﻿namespace Base.Application.Helpers
+﻿using Base.Domain.Entities;
+
+namespace Base.Application.Helpers
 {
     public static class VrpMatrix
     {
-        public static decimal[,] GetDistanceMatrix(decimal[] lattitudes, decimal[] longitudes)
+        public static double[,] GetDistanceMatrix(Location[] locations)
         {
-            int rows = lattitudes.Length;
-            int cols = longitudes.Length;
-            decimal[,] distanceMatrix = new decimal[rows, cols];
+            int rows = locations.Length;
+            int cols = locations.Length;
+            double[,] distanceMatrix = new double[rows, cols];
 
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < cols; j++)
                 {
-                    decimal distanceBetweenTwoLocation = Math.Abs(lattitudes[i] - lattitudes[j]) + Math.Abs(longitudes[i] - longitudes[j]);
+                    double distanceBetweenTwoLocation = Calculations.CalculateDistanceBetweenTwoLocation(locations[i], locations[j]);
                     distanceMatrix[i, j] = distanceBetweenTwoLocation;
                 }
             }
